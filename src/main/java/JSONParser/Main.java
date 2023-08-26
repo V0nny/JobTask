@@ -4,12 +4,12 @@ import JSONParser.Calculators.*;
 import JSONParser.DAO.TicketsDAO;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         TicketsDAO ticketsDAO = new TicketsDAO();
         PriceCalculator calculator = new PriceCalculator();
         TravelTimeCalculator travelTimeCalculator = new TravelTimeCalculator();
 
-        calculator.showResult(ticketsDAO);
         travelTimeCalculator.showTravelTimeForCarriers(ticketsDAO);
+        calculator.showResult(ticketsDAO);
     }
 }

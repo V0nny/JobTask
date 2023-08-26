@@ -10,12 +10,12 @@ import java.util.stream.Collectors;
 
 public class PriceCalculator {
 
-    public void showResult(TicketsDAO ticketsDAO) throws IOException {
+    public void showResult(TicketsDAO ticketsDAO) {
         double diff = calculateDifferenceOfPrices(ticketsDAO);
         System.out.println("Разница между средней ценой и медианой для полета между городами Владивосток и Тель-Авив: " + diff);
     }
 
-    private double calculateDifferenceOfPrices(TicketsDAO tickets) throws IOException {
+    private double calculateDifferenceOfPrices(TicketsDAO tickets) {
         return findMediumPrice(tickets) - findMedianOfPrices(tickets);
     }
 

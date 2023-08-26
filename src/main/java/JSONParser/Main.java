@@ -9,7 +9,7 @@ public class Main {
         PriceCalculator calculator = new PriceCalculator();
         TravelTimeCalculator travelTimeCalculator = new TravelTimeCalculator();
 
-        calculator.showResult(ticketsDAO);
         travelTimeCalculator.showTravelTimeForCarriers(ticketsDAO);
+        calculator.showResult(ticketsDAO);
     }
 }
